@@ -55,7 +55,7 @@ using namespace std;
 
 void reverseArray(int arr[], int n){
     int i=0, j=n-1;
-    while(i<j){
+    while(i<=j){
         int temp=arr[i];
         arr[i]=arr[j];
         arr[j]=temp;
@@ -78,3 +78,67 @@ int main() {
 Here we loop through the entire array beginning from either sides till i>j
 
 ## Space Complexity: O(1)
+Here no extra space is used hence the given space complexity
+
+# Approach 3: Optimal
+Here instead of 2 pointers we use just 1 pointer which is a slight optimization
+## Steps:
+1. Initialise i to 0 
+2. while(i<n/2), keep swapping the elements, increment i
+## Code:
+
+```c
+#include <bits/stdc++.h>
+using namespace std;
+
+void reverseArray(int arr[], int n){
+    int i=0, j=n-1;
+    while(i<n/2){
+        int temp=arr[i];
+        arr[i]=arr[n-i-1];
+        arr[n-i-1]=temp;
+        i++; 
+    }
+}
+
+
+int main() {
+    int arr[]={1, 2, 3, 4, 5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    reverseArray(arr, n);
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
+```
+## Time Complexity: O(n)
+Here we loop through the first half of the array hence O(n/2) but we we knwo we take this as O(n) according to the Big-O notation
+
+## Space Complexity: O(1)
+Here no extra space is used hence the given space complexity
+
+# Another Approach: Using C++'s inbuilt reverse function i.e reverse(arr.begin(), arr.end())
+## Code:
+
+```c
+#include <bits/stdc++.h>
+using namespace std;
+
+void reverseArray(vector<int> &arr){
+    reverse(arr.begin(), arr.end());
+}
+
+int main() {
+    vector<int> arr={1, 2, 3, 4, 5};
+    reverseArray(arr);
+    for(int i=0;i<arr.size();i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
+```
+## Time Complexity: O(n)
+## Space Complexity: O(1)
+
+
