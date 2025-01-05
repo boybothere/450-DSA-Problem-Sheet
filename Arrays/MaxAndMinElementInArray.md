@@ -45,8 +45,8 @@ int main() {
 Sorting takes O(n log n), where log n comes from the number of divisions or recursive steps, and n comes from the number of elements that are processed at each level
 The general idea is O(n log n) for sorting algorithms like MergeSort, QuickSort
 
-# Space Complexity: O(n)
-Here the function uses extra space to store the subarrays which are dealt with which are proportional to the number of elements in the sorted array
+# Space Complexity: O(1)
+Normally we consider O(1) however based on how the function uses extra space to store the subarrays which are dealt with which are proportional to the number of elements in the sorted array we may consider O(n) too
 
 # Approach 2: Optimal
 Here we assume maximum element to be INT_MIN and minimum element to be INT_MAX 
