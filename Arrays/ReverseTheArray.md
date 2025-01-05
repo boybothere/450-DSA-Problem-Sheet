@@ -46,14 +46,35 @@ Here we have used an extra array nums[] of size n(numbers of elements in the ori
 Here I am using the 2 pointers approach considering 2 pointers : i and j
 ## Steps:
 1. Initialise i to 0 and j to n-1
-2. 2. while(i<j), keep swapping the elements
+2. while(i<j), keep swapping the elements, increment i and decrement j
 ## Code:
 
 ```c
+#include <bits/stdc++.h>
+using namespace std;
 
+void reverseArray(int arr[], int n){
+    int i=0, j=n-1;
+    while(i<j){
+        int temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+        i++;
+        j--;
+    }
+}
 
+int main() {
+    int arr[]={1, 2, 3, 4, 5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    reverseArray(arr, n);
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
 ```
 ## Time Complexity: O(n)
+Here we loop through the entire array beginning from either sides till i>j
 
-
-## Space Complexity: O(n)
+## Space Complexity: O(1)
