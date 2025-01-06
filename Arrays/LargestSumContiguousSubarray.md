@@ -57,4 +57,35 @@ int main() {
 ## Time Complexity: O($n^2$)
 ## Space Complexity: O(1)
 
+# Optimal Approach
+
+## Code:
+ ```c
+#include <bits/stdc++.h>
+using namespace std;
+
+int maxSubarraySum(vector<int> &arr) {
+        int maxi = INT_MIN, sum=0;
+        for(int i=0;i<arr.size();i++){
+            sum+=arr[i];
+            if(sum>maxi){
+                maxi=sum;
+            }
+            if(sum<=0){
+                sum=0;
+            }
+        }
+        return maxi;
+    }
+int main() {
+    vector<int> arr={1, 2, 3, 4, 3};;
+    int maxi = maxSubarraySum(arr);
+    cout<<maxi;
+    return 0;
+}
+ ```
+
+## Time Complexity: O(n)
+## Space Complexity: O(1)
+
 
