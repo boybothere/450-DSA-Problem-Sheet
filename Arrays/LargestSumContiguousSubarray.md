@@ -59,6 +59,11 @@ int main() {
 
 # Optimal Approach
 
+This is a famous algorithm used specifically to find the largest sum of contiguous subarrays
+1. Basically we add the array elements to the sum which we initialize to 0 
+2. Then we perform a check to see if the calculated sum is greater than the maximum sum obtained yet and update the maximum accordingly
+3. If sum calculated is negative we simply make sum = 0 because we need to maximize our sum
+
 ## Code:
  ```c
 #include <bits/stdc++.h>
