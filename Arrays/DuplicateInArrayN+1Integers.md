@@ -96,7 +96,7 @@ int main() {
 ```
 
 ## Time Complexity: O(n)
-Though this code takes O(n) which is quite better than map it is worth noting that in its worst case it can go to O(n^2) but these cases are very rare and the reason it occurs is due to hashing
+Though this code takes O(n) which is quite better than map it is worth noting that in its worst case it can go to O($n^2$) but these cases are very rare and the reason it occurs is due to hashing
 
 To make it simpler and clearer, unordered_map uses hash table to store elements in no specific order so if all the elements get mapped to a single bucket then when inserting and retreiving specially it will get tedious, but in most cases it is preferred to use unordered_map over map
 
