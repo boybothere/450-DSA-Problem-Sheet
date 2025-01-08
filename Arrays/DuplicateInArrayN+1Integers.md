@@ -31,7 +31,7 @@ int main() {
 
 Here we use 2 nested loops to check all possible comparisons to arrive at the duplicate number.
 
-## Time Complexity: O(n)
+## Time Complexity: O($n^2$)
 ## Space Complexity: O(1)
 
 # Better Approach:
